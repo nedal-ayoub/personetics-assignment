@@ -40,7 +40,7 @@ pipeline {
                 unstash 'demo-jar'
                 script {
                     env["IMAGE"] = "${env.PROJ}:${env.BRANCH_NAME}.${env.BUILD_ID}"
-                    def customImage = docker.build(env["IMAGE"])
+                    def customImage = docker.build(env["IMAGE"]) 
                 }
             }
         }
@@ -56,7 +56,7 @@ pipeline {
             agent { label "master" }
             // TODO 3 add a command to save docker image as tar file in the deployment folder
             steps {
-                sh "[write the cmd here]"
+                sh "docker save ${env['IMAGE']} > ./deployment/${env['IMAGE']}.tar"
             }
         }
 
@@ -79,9 +79,10 @@ pipeline {
                 ansiblePlaybook(
                         colorized: true,
                         // TODO 4 On Jenkins (http://jenkins_url:8080/credentials/) create a credentials secret (SSH username with private key) with the provided key
-                        credentialsId: '[credentials-id]',
+                        credentialsId: 'ansible-credential',
                         disableHostKeyChecking: true,
                         // TODO 4 add new image param with image name as value i.e. image=[?]
+                        image: "${env['IMAGE']}",
                         extras: "-e server_ip=${env.SERVER_IP} " +
                                 "-e project_name=${env.PROJ} " +
                                 "-vvv",
