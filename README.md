@@ -7,9 +7,6 @@
     - Jenkinsfile - CI/CD for this project  
 
 
-
-
-
 2. deployment folder 
    - containing ansible playbook and 3 roles to deploy the serving-web-content 
       project docker image to a server
