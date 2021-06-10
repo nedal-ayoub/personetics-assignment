@@ -31,7 +31,6 @@
    - Enable that whenever it's restarting the docker engine and jenkins will start also
    (write the steps you did in the final email)
    
- nedal
 2. ***VCS***
    1. Deploy this content (source code) to an online VCS repo of your choice (GitHub/bitbucket/gitlab all has free accounts)
    2. Create develop, and release branches, so we can implement our gitflow methodology
