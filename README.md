@@ -6,7 +6,6 @@
     - Dockerfile - Packaging this project in Image  
     - Jenkinsfile - CI/CD for this project  
 
-
 2. deployment folder 
    - containing ansible playbook and 3 roles to deploy the serving-web-content 
       project docker image to a server
@@ -16,7 +15,7 @@
    - private-key for ssh to the aws instances
    - list of ip - first is the Jenkins_Master, second for deployment
    - docker-compose file /var/lib/jenkins it's a good-to-go `docker-compose.yaml` (doesn't need any changes)
-... nedal ayoub ! 
+ 
 #### Status
 1. Jenkins server is running on docker working successfully but after restart needs manual start.
 2. The serving-web-content Project Image is also builds correctly and tested locally.
@@ -32,6 +31,7 @@
    - Enable that whenever it's restarting the docker engine and jenkins will start also
    (write the steps you did in the final email)
    
+ nedal
 2. ***VCS***
    1. Deploy this content (source code) to an online VCS repo of your choice (GitHub/bitbucket/gitlab all has free accounts)
    2. Create develop, and release branches, so we can implement our gitflow methodology
@@ -45,6 +45,7 @@ nedal ayoub
    1. Add SSH user & key credentials object in Jenkins_Master for ansible to connect to the deployment instance
    2. Put the deployment server IP in the inventory file 
    3. Set the image param for the ansible process with the image value.
+
 
 ##### Resources:
 ***In the Jenkins-Master folder***
