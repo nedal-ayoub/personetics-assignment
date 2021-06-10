@@ -22,9 +22,6 @@
 3. Ansible's roles also validated and working.
 4. Jenkinsfile was tested in a previous environment but in the latest cyberattack  
    the repo has been deleted. The only backup we found has the previous commit 
-...
-....
-....
 
 ### Since you are our last hope we giving you this backup file and counting on you to save the day
 
@@ -48,11 +45,10 @@ nedal ayoub
    2. Put the deployment server IP in the inventory file 
    3. Set the image param for the ansible process with the image value.
 
-
 ##### Resources:
 ***In the Jenkins-Master folder***
 1. jkey - the private key for servers connect with default ec2 user
 2. ips - list of ips to use with the key one for Jenkins and one for deployment
 3. jAdmin - user pass to jenkins UI
 
-### The environment will self-destruct at ... 
+### The environment will self-destruct at..
