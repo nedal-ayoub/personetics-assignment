@@ -36,7 +36,7 @@
    1. Deploy this content (source code) to an online VCS repo of your choice (GitHub/bitbucket/gitlab all has free accounts)
    2. Create develop, and release branches, so we can implement our gitflow methodology
    3. Connect GitHub (the vcs repo you choose) to Jenkins_Master via webhook trigger so each commit will trigger the build  
-
+nedal ayoub
 3. Docker ***Image*** build 
    - We don't have docker registry and not alloed to put our private app on docker hub so
    - In the Jenkins file at `stage("prepare image to deploy")` Add an `sh ""` (shell command) to save the image as a tar file in the deployment folder
