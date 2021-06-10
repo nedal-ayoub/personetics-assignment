@@ -17,11 +17,7 @@
 3. Jenkins-Master folder - resources
    - private-key for ssh to the aws instances
    - list of ip - first is the Jenkins_Master, second for deployment
-   - docker-compose file /var/lib/jenkins it's a good-to-go `docker-compose.yaml` (doesn't need any changes)....
-
-
-
-
+   - docker-compose file /var/lib/jenkins it's a good-to-go `docker-compose.yaml` (doesn't need any changes)
 
 #### Status
 1. Jenkins server is running on docker working successfully but after restart needs manual start.
@@ -37,10 +33,6 @@
 1. ***Jenkins_Master***
    - Enable that whenever it's restarting the docker engine and jenkins will start also
    (write the steps you did in the final email)
-   
-   
-   
-   
    
 2. ***VCS***
    1. Deploy this content (source code) to an online VCS repo of your choice (GitHub/bitbucket/gitlab all has free accounts)
