@@ -23,8 +23,6 @@
 4. Jenkinsfile was tested in a previous environment but in the latest cyberattack  
    the repo has been deleted. The only backup we found has the previous commit 
 
-
-
 ### Since you are our last hope we giving you this backup file and counting on you to save the day
 
 ### Your mission, should  you choose to accept it
