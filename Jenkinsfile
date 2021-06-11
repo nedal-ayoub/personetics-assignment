@@ -37,10 +37,12 @@ pipeline {
         // building the image locally
         stage("build img") {
             steps {
+                echo "Target Branch = ${env.ghprbTargetBranch}"
                 unstash 'demo-jar'
                 script {
                     env["IMAGE"] = "${env.PROJ}:${env.BRANCH_NAME}.${env.BUILD_ID}"
                     def customImage = docker.build(env["IMAGE"]) 
+                    
                 }
             }
         }
@@ -50,8 +52,8 @@ pipeline {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
             when {
-//                 branch "release*"
-                expression { params.ghprbTargetBranch == 'release' }
+                // branch "release*"
+                expression { env.ghprbTargetBranch == 'release' }
             }
             // Adding agent to make sure we'll use  the same (@2) workspace
             agent { label "master" }
