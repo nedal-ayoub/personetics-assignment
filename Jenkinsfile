@@ -51,7 +51,7 @@ pipeline {
         stage("prepare image to deploy") {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
-            when {
+          when {
                 // branch "release*"
                 expression { env.ghprbTargetBranch == 'release' }
             }
@@ -67,8 +67,8 @@ pipeline {
         stage("deploy") {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
-            when {
-//                 branch "release*"
+          when {
+              //                 branch "release*"
                 expression { env.ghprbTargetBranch == 'release' }
             }
             agent {
@@ -89,6 +89,7 @@ pipeline {
                         // TODO 4 add new image param with image name as value i.e. image=[?]
                         extras: "-e server_ip=${env.SERVER_IP} " +
                                 "-e project_name=${env.PROJ} " +
+                                "-e image=${env['IMAGE']}",
                                 "-e image= ${env['IMAGE']}",
                         // TODO 4 add ip to inventory file
                         inventory: 'deployment/inventory',
@@ -101,8 +102,8 @@ pipeline {
         stage("test-deployment") {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
-            when {
-                branch "release*"
+           when {
+                branch "release*"   
             }
             steps {
                 script {
