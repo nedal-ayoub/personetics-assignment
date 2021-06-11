@@ -29,13 +29,6 @@ pipeline {
             }
            
             steps {
-                 script {
-                    def commit = checkout scm
-                    // we set BRANCH_NAME to make when { branch } syntax work without multibranch job
-                    env.BRANCH_NAME = commit.GIT_BRANCH.replace('origin/', '')
-
-                    //actually build ...
-                }
                 sh 'mvn --version'
                 sh 'mvn clean install -ntp -B -e'
                 stash includes: 'target/demo.jar', name: 'demo-jar'
