@@ -51,7 +51,7 @@ pipeline {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
             when {
-                expression { env.ghprbTargetBranch == 'release' }
+                branch "release*"
             }
             // Adding agent to make sure we'll use  the same (@2) workspace
             agent { label "master" }
@@ -66,7 +66,7 @@ pipeline {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
             when {
-                expression { env.ghprbTargetBranch == 'release' }
+                branch "release*"
             }
             agent {
                 dockerfile {
@@ -98,7 +98,7 @@ pipeline {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
             when {
-                expression { env.ghprbTargetBranch == 'release' }
+                branch "release*"
             }
             steps {
                 script {
