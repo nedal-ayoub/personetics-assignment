@@ -76,7 +76,6 @@ pipeline {
             steps {
                 sh 'ls -la'
                 sh 'ls -la deployment'
-                def image="${env['IMAGE']}"
                 ansiblePlaybook(
                         colorized: true,
                         // TODO 4 On Jenkins (http://jenkins_url:8080/credentials/) create a credentials secret (SSH username with private key) with the provided key
