@@ -17,15 +17,11 @@
    - docker-compose file /var/lib/jenkins it's a good-to-go `docker-compose.yaml` (doesn't need any changes)
 #### Status
 
-
-
 1. Jenkins server is running on docker working successfully but after restart needs manual start.
 2. The serving-web-content Project Image is also builds correctly and tested locally.
 3. Ansible's roles also validated and working.
 4. Jenkinsfile was tested in a previous environment but in the latest cyberattack  
    the repo has been deleted. The only backup we found has the previous commit 
-
-
 
 ### Since you are our last hope we giving you this backup file and counting on you to save the day
 
