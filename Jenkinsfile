@@ -49,7 +49,9 @@ pipeline {
         stage("prepare image to deploy") {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
-        
+            when {
+                branch= "*/release"   
+            }
             // Adding agent to make sure we'll use  the same (@2) workspace
             agent { label "master" }
             // TODO 3 add a command to save docker image as tar file in the deployment folder
@@ -62,7 +64,9 @@ pipeline {
         stage("deploy") {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
-           
+            when {
+                branch= "*/release"   
+            }
             agent {
                 dockerfile {
                     dir 'deployment'
@@ -92,7 +96,9 @@ pipeline {
         stage("test-deployment") {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
-          
+           when {
+                branch= "*/release"   
+            }
             steps {
                 script {
                     sleep 30
