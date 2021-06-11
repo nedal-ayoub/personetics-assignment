@@ -27,6 +27,13 @@ pipeline {
                     args "-v \$HOME/.m2:/root/.m2"
                 }
             }
+            script {
+                    def commit = checkout scm
+                    // we set BRANCH_NAME to make when { branch } syntax work without multibranch job
+                    env.BRANCH_NAME = commit.GIT_BRANCH.replace('origin/', '')
+
+                    //actually build ...
+                }
             steps {
                 sh 'mvn --version'
                 sh 'mvn clean install -ntp -B -e'
