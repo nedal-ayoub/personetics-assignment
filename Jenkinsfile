@@ -49,12 +49,8 @@ pipeline {
         stage("prepare image to deploy") {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
-            def branch = env.BRANCH_NAME
             when {
-                beforeAgent true
-                expression{
-                    branch=="release"
-                }
+               branch "release*"
             }
             // Adding agent to make sure we'll use  the same (@2) workspace
             agent { label "master" }
@@ -69,7 +65,7 @@ pipeline {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
             when {
-                branch "release/*"   
+                branch "release*"   
             }
             agent {
                 dockerfile {
@@ -101,7 +97,7 @@ pipeline {
             // This step will only run when merging to release branch
             // TODO 2 create branch release* in VCS and do Pull Request
            when {
-                branch "release/*"   
+                branch "release*"   
             }
             steps {
                 script {
