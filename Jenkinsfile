@@ -82,7 +82,7 @@ pipeline {
                         credentialsId: 'ansible-credential',
                         disableHostKeyChecking: true,
                         // TODO 4 add new image param with image name as value i.e. image=[?]
-                        image=["${env['IMAGE']}"],
+                        image="${env['IMAGE']}",
                         extras: "-e server_ip=${env.SERVER_IP} " +
                                 "-e project_name=${env.PROJ} " +
                                 "-vvv",
