@@ -81,7 +81,7 @@ pipeline {
                 sh 'ls -la'
                 sh 'ls -la deployment'
                 
-                def image = "${env['IMAGE']}"
+//                 def image = "${env['IMAGE']}"
                 
                 ansiblePlaybook(
                         colorized: true,
