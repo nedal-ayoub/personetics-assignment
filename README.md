@@ -12,6 +12,8 @@
       project docker image to a server
    - Dockerfile (centos-7 with ansible) for deploy stage 
 
+
+
 3. Jenkins-Master folder - resources
    - jkey - the private key for servers connect with default ec2 user
    - ips - list of ips to use with the key one for Jenkins and one for deployment
