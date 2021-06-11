@@ -1,5 +1,6 @@
 ### Demo Repo - CI/CD and docker
 
+
 #### This repo contains 3 Elements
 1. At root level based on spring-boot serving-web-content project ( [tutorial](https://spring.io/guides/gs/serving-web-content/) ) 
     - Maven project - build using `mvn clean package`
@@ -25,8 +26,12 @@
    the repo has been deleted. The only backup we found has the previous commit 
    
 
+
 ### Since you are our last hope we giving you this backup file and counting on you to save the day...
 
+
+
+### Since you are our last hope we giving you this backup file and counting on you to save the day...
 ### what i had to do: 
 
 1. ***Jenkins_Master***
@@ -48,8 +53,11 @@
    3. Set the image param for the ansible process with the image value.
 
 ## when the program run: 
+
       the jenkins job is triggered to run when someone do commit to new change in develop branch, 
       such that we check if the change is accepted and create new pull so github trigger jenkins job 
+
+      the jenkins job is triggered to run when someone do commit to new change in develop branch, such that we check if the change is accepted and create new pull so github trigger jenkins job 
       to run jenkinsfile and test the code. after that if we get that every thing is okey , we merge between release and develop branches.
 
 
