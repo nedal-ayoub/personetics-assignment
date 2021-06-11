@@ -11,12 +11,12 @@
       project docker image to a server
    - Dockerfile (centos-7 with ansible) for deploy stage 
 
-
 3. Jenkins-Master folder - resources
    - private-key for ssh to the aws instances
    - list of ip - first is the Jenkins_Master, second for deployment
    - docker-compose file /var/lib/jenkins it's a good-to-go `docker-compose.yaml` (doesn't need any changes)
 #### Status
+
 1. Jenkins server is running on docker working successfully but after restart needs manual start.
 2. The serving-web-content Project Image is also builds correctly and tested locally.
 3. Ansible's roles also validated and working.
