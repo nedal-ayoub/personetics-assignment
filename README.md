@@ -57,8 +57,6 @@
 
       the jenkins job is triggered to run when someone do commit to new change in develop branch, 
       such that we check if the change is accepted and create new pull so github trigger jenkins job 
-
-      the jenkins job is triggered to run when someone do commit to new change in develop branch, such that we check if the change is accepted and create new pull so github trigger jenkins job 
       to run jenkinsfile and test the code. after that if we get that every thing is okey , we merge between release and develop branches.
 
 
