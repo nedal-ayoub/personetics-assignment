@@ -80,8 +80,7 @@ pipeline {
                         // TODO 4 add new image param with image name as value i.e. image=[?]
                         extras: "-e server_ip=${env.SERVER_IP} " +
                                 "-e project_name=${env.PROJ} " +
-                                "-vvv "+
-                                "image=${env['IMAGE']}",
+                                "-e image=${env['IMAGE']}",
                         // TODO 4 add ip to inventory file
                         inventory: 'deployment/inventory',
                         playbook: 'deployment/deploy.yml'
