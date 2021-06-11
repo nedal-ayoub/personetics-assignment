@@ -11,9 +11,6 @@
       project docker image to a server
    - Dockerfile (centos-7 with ansible) for deploy stage 
 
-
-
-
 3. Jenkins-Master folder - resources
    - private-key for ssh to the aws instances
    - list of ip - first is the Jenkins_Master, second for deployment
