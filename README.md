@@ -18,6 +18,8 @@
 #### Status
 
 
+
+
 1. Jenkins server is running on docker working successfully but after restart needs manual start.
 2. The serving-web-content Project Image is also builds correctly and tested locally.
 3. Ansible's roles also validated and working.
